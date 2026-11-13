@@ -1,9 +1,10 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Registration form</title>
+    <title>Register | NEOGATE</title>
+    <link rel="stylesheet" href="design-system.css" />
     <link rel="stylesheet" href="reg.css" />
     <link
       rel="stylesheet"
@@ -14,7 +15,9 @@
     />
   </head>
   <body>
-    <div class="registration">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <div class="registration" id="main-content">
       <div class="registration-card">
         <h1>
           <span><i class="fa-regular fa-face-smile"></i></span> NEOGATE
@@ -22,33 +25,92 @@
 
         <p>Join the future of Web3 connectivity</p>
 
-        <form action="">
-          <input
-            type="text"
-            name="Full Name"
-            placeholder="Full Name"
-            required
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Email/Wallet address"
-            required
-          />
-          <input
-            type="password"
-            name="password"
-            placeholder="Password"
-            required
-          />
-          <input
-            type="password"
-            name="confirm-password"
-            placeholder="Confirm Password"
-            required
-          />
+        <form id="regForm" novalidate>
+          <div class="form-group">
+            <label for="reg-name">Full Name</label>
+            <input
+              type="text"
+              id="reg-name"
+              name="fullName"
+              placeholder="Full Name"
+              autocomplete="name"
+              required
+              aria-required="true"
+              aria-describedby="name-error"
+            />
+            <span class="error-message" id="name-error" role="alert" aria-live="polite"></span>
+          </div>
+          <div class="form-group">
+            <label for="reg-email">Email / Wallet Address</label>
+            <input
+              type="text"
+              id="reg-email"
+              name="email"
+              placeholder="Email or Wallet address"
+              autocomplete="username"
+              required
+              aria-required="true"
+              aria-describedby="reg-email-error"
+            />
+            <span class="error-message" id="reg-email-error" role="alert" aria-live="polite"></span>
+          </div>
+          <div class="form-group password-group">
+            <label for="reg-password">Password</label>
+            <input
+              type="password"
+              id="reg-password"
+              name="password"
+              placeholder="Password"
+              autocomplete="new-password"
+              required
+              aria-required="true"
+              aria-describedby="reg-password-error"
+            />
+            <button
+              type="button"
+              class="password-toggle"
+              aria-label="Toggle password visibility"
+              aria-pressed="false"
+            >
+              <i class="fa-regular fa-eye"></i>
+            </button>
+            <span
+              class="error-message"
+              id="reg-password-error"
+              role="alert"
+              aria-live="polite"
+            ></span>
+          </div>
+          <div class="form-group password-group">
+            <label for="reg-confirm">Confirm Password</label>
+            <input
+              type="password"
+              id="reg-confirm"
+              name="confirmPassword"
+              placeholder="Confirm Password"
+              autocomplete="new-password"
+              required
+              aria-required="true"
+              aria-describedby="reg-confirm-error"
+            />
+            <button
+              type="button"
+              class="password-toggle"
+              aria-label="Toggle password visibility"
+              aria-pressed="false"
+            >
+              <i class="fa-regular fa-eye"></i>
+            </button>
+            <span
+              class="error-message"
+              id="reg-confirm-error"
+              role="alert"
+              aria-live="polite"
+            ></span>
+          </div>
+          <button type="submit" id="regSubmit">Create Account</button>
         </form>
-        <button type="submit">Create Account</button>
+        <p id="reg-status" class="form-status" role="status" aria-live="polite"></p>
 
         <div class="or">
           <span class="line"></span>
@@ -56,7 +118,9 @@
           <span class="line"></span>
         </div>
 
-        <button><span><i class="fa-solid fa-wallet"></i></span>Connect Wallet</button>
+        <button type="button" id="walletConnect">
+          <span><i class="fa-solid fa-wallet" aria-hidden="true"></i></span>Connect Wallet
+        </button>
 
         <div class="signup-link">
           <p>
@@ -67,15 +131,18 @@
       </div>
 
       <!-- why join neogate -->
-        <aside class="why-join">
-            <h2>Why Join NEOGATE?</h2>
-            <ul>
-            <li>Seamless Web3 Integration</li>
-            <li>Secure Wallet Connections</li>
-            <li>User-Friendly Interface</li>
-            <li>Access to Exclusive Features</li>
-            <li>24/7 Customer Support</li>
-            </ul>
-    </aside>
+      <aside class="why-join" aria-label="Why join NEOGATE">
+        <h2>Why Join NEOGATE?</h2>
+        <ul>
+          <li>Seamless Web3 Integration</li>
+          <li>Secure Wallet Connections</li>
+          <li>User-Friendly Interface</li>
+          <li>Access to Exclusive Features</li>
+          <li>24/7 Customer Support</li>
+        </ul>
+      </aside>
+    </div>
+
+    <script src="reg.js"></script>
   </body>
 </html>

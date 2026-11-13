@@ -1,0 +1,81 @@
+/* Login & Registration Form - Design System
+   Brand: Neon cyan on dark navy surfaces
+*/
+:root {
+  /* Brand */
+  --ds-brand-primary: #00e0ff;
+  --ds-brand-primary-hover: #00b3cc;
+  --ds-brand-secondary: #00b3cc;
+  --ds-brand-accent: #00ffb7;
+
+  /* Surfaces */
+  --ds-bg-body: #07121a;
+  --ds-bg-surface: linear-gradient(180deg, rgb(255 255 255 / 2%), rgb(255 255 255 / 1%));
+  --ds-bg-card: #071a21;
+  --ds-bg-input: #071a21;
+  --ds-bg-hover: rgb(255 255 255 / 8%);
+  --ds-bg-active: rgb(0 224 255 / 15%);
+
+  /* Text */
+  --ds-text-primary: #fff;
+  --ds-text-secondary: #93a7b4;
+  --ds-text-muted: #6b7a9d;
+  --ds-text-inverse: #07121a;
+  --ds-text-link: #00e0ff;
+
+  /* Borders & Dividers */
+  --ds-border: rgb(255 255 255 / 4%);
+  --ds-border-focus: var(--ds-brand-primary);
+  --ds-divider: rgb(255 255 255 / 4%);
+
+  /* States */
+  --ds-success: #10b981;
+  --ds-warning: #f59e0b;
+  --ds-error: #ef4444;
+  --ds-info: #00e0ff;
+
+  /* Shadows */
+  --ds-shadow-sm: 0 1px 2px rgb(0 0 0 / 30%);
+  --ds-shadow-md: 0 10px 40px rgb(2 10 20 / 60%);
+  --ds-shadow-lg: 0 6px 30px rgb(0 224 255 / 3%);
+
+  /* Radius */
+  --ds-radius-sm: 6px;
+  --ds-radius-md: 10px;
+  --ds-radius-lg: 18px;
+  --ds-radius-full: 9999px;
+
+  /* Spacing */
+  --ds-space-xs: 0.25rem;
+  --ds-space-sm: 0.5rem;
+  --ds-space-md: 1rem;
+  --ds-space-lg: 1.5rem;
+  --ds-space-xl: 2rem;
+  --ds-space-2xl: 3rem;
+
+  /* Transitions */
+  --ds-transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --ds-transition-base: 220ms cubic-bezier(0.2, 0.9, 0.3, 1);
+  --ds-transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Z-index */
+  --ds-z-dropdown: 100;
+  --ds-z-sticky: 200;
+  --ds-z-modal: 1000;
+  --ds-z-tooltip: 1100;
+
+  /* Typography */
+  --ds-font-sans:
+    'Poppins', system-ui, -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, sans-serif;
+  --ds-font-mono: ui-monospace, sfmono-regular, menlo, monospace;
+  --ds-text-xs: 0.75rem;
+  --ds-text-sm: 0.875rem;
+  --ds-text-base: 1rem;
+  --ds-text-lg: 1.125rem;
+  --ds-text-xl: 1.25rem;
+  --ds-text-2xl: 1.5rem;
+  --ds-text-3xl: 1.875rem;
+  --ds-line-height-tight: 1.25;
+  --ds-line-height-normal: 1.4;
+  --ds-line-height-relaxed: 1.75;
+}
